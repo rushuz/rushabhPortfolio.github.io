@@ -5,75 +5,74 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
+  }
+  
+  body {
     background-color: rgb(6, 7, 12);
     color: white;
     padding: 0 8%;
-}
-
-/* Header */
-header {
+  }
+  
+  /* Header */
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-}
-
-nav {
+  }
+  
+  nav {
     display: flex;
     gap: 20px;
-}
-
-.nav-item {
+  }
+  
+  .nav-item {
     color: white;
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.2s;
-}
-
-.nav-item:hover {
+  }
+  
+  .nav-item:hover,
+  .nav-item.active {
     color: #3FA2F6;
-}
-
-.nav-item.active {
-    color: #3FA2F6;
-}
-
-/* Hero Section */
-#hero {
+  }
+  
+  /* Hero Section */
+  #hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     height: calc(100vh - 80px);
-}
-
-.hero-left {
+    padding-top: 30px;
+  }
+  
+  .hero-left {
     padding-right: 40px;
-}
-
-.hero-left h1 {
+  }
+  
+  .hero-left h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
-}
-
-.hero-left h3 {
+  }
+  
+  .hero-left h3 {
     font-size: 1.5rem;
     color: #3FA2F6;
     margin-bottom: 20px;
     font-weight: 500;
-}
-
-.hero-left p {
+  }
+  
+  .hero-left p {
     line-height: 1.8;
     font-size: 1rem;
     color: lightgray;
     margin-bottom: 30px;
-}
-
-.hero-right {
+  }
+  
+  /* Hero Image */
+  .hero-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,15 +89,19 @@ nav {
     transition: transform 0.3s ease;
   }
   
-  @media (max-width: 768px) {
-    .hero-image {
-      width: 60%;
-      max-width: 280px;
+  @keyframes floatIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
     }
-  }  
-
-/* Buttons */
-.cta button {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* CTA Buttons */
+  .cta button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -106,31 +109,31 @@ nav {
     font-size: 1rem;
     font-weight: 500;
     margin-right: 10px;
-}
-
-.cta .cta-1 {
+  }
+  
+  .cta .cta-1 {
     background-color: #3FA2F6;
     color: black;
-}
-
-.cta .cta-2 {
+  }
+  
+  .cta .cta-2 {
     background-color: transparent;
     color: #3FA2F6;
     border: 2px solid #3FA2F6;
-}
-
-.cta button:hover {
+  }
+  
+  .cta button:hover {
     opacity: 0.8;
-}
-
-/* Social Icons */
-.social-icon {
+  }
+  
+  /* Social Icons */
+  .social-icon {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-}
-
-.social-icon i {
+  }
+  
+  .social-icon i {
     font-size: 1.2rem;
     color: #3FA2F6;
     border: 1px solid #3FA2F6;
@@ -138,24 +141,24 @@ nav {
     padding: 8px;
     cursor: pointer;
     transition: transform 0.2s;
-}
-
-.social-icon i:hover {
+  }
+  
+  .social-icon i:hover {
     transform: scale(1.2);
-}
-
-
-label {
-    display: block;
+  }
+  
+  /* Label Styling */
+  label {
+    display: flex;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: left;
     color: #555;
     font-weight: bold;
-}
-
-.cta-3 {
+  }
+  
+  .cta-3 {
     background-color: transparent;
     color: #3FA2F6;
     border: 2px solid #3FA2F6;
@@ -165,16 +168,23 @@ label {
     font-size: 1rem;
     font-weight: 500;
     margin-right: 30px;
-
-}
-
-/* Projects Section */
-#projects {
+  }
+  
+  /* Projects Section */
+  #projects {
     padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
-    border: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+    color: black;
     border-radius: 5px;
+  }
+  
+  #projects.show {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .section-title {
@@ -183,12 +193,14 @@ label {
     color: #333;
   }
   
+  /* Project Cards Grid */
   .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
   
+  /* Individual Card Styling */
   .project-card {
     background: #fff;
     padding: 20px;
@@ -199,7 +211,7 @@ label {
     transition: all 0.6s ease-in-out;
     color: black;
   }
-
+  
   .project-card.show {
     opacity: 1;
     transform: scale(1);
@@ -213,3 +225,49 @@ label {
     color: #1a73e8;
     margin-bottom: 10px;
   }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    #hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .hero-left {
+      padding: 0;
+    }
+  
+    .hero-image {
+      width: 60%;
+      max-width: 280px;
+    }
+  
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .project-card {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero-left h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-left h3 {
+      font-size: 1.2rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
