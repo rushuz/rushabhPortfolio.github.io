@@ -1,112 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rushabh's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushabh Shiradkar | Portfolio</title>
 
-  <!-- Google Fonts -->
-   <!-- Add in <head> -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-  <!-- Header Section -->
+
+  <!-- HEADER -->
   <header id="header">
-    <div class="left-section">
-      <a class="logo" href="#"><h3>Welcome!</h3></a>
-    </div>
+    <h3 class="logo">Welcome!</h3>
 
     <nav>
-      <a class="nav-item active" href="#">Home</a>
-      <a class="nav-item" href="#">Service</a>
-      <a class="nav-item" href="#projects">Projects</a>
-      <a class="nav-item" href="#">About</a>
-      <a class="nav-item" href="#contact.html">Contacts</a>
+      <a href="#hero" class="nav-item active">Home</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <div class="content">
-        <h1>Hi, I'm Rushabh Shiradkar</h1>
-        <h3>Web Developer</h3>
-        <p>
-          I’m Rushabh, a creative web designer passionate about building innovative digital experiences. With a
-          focus on clean design, intuitive user experiences, and the latest web technologies, I help brands and
-          businesses transform their online presence. Whether you're looking to revamp your current site or build
-          something from the ground up, I’m here to bring your ideas to life. Let’s create something amazing together!
-        </p>
+      <h1>Hi, I'm <span>Rushabh Shiradkar</span></h1>
+      <h3>Full Stack Developer</h3>
+      <p>
+        <b>Code that performs. Interfaces that connect.</b><br>
+        I build clean, responsive, and user-friendly web applications with a strong focus on performance and usability.
+        Passionate about full-stack development and continuously learning modern web technologies to deliver impactful solutions.
+      </p>
 
-        <div class="cta">
-          <button class="cta-1">Home</button>
-          <a href="contact.html">
-            <button class="cta-2">Contact Us</button>
-          </a>
-        </div>
+      <div class="cta">
+        <a href="#projects"><button class="cta-1">View Projects</button></a>
+        <a href="contact.html"><button class="cta-2">Contact Me</button></a>
+      </div>
 
-        <div class="social-icon">
-          <a href="https://www.linkedin.com/in/rushabh-shiradkar-41956824a/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/rushuz" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
+      <div class="social-icon">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-twitter"></i>
       </div>
     </div>
-    <div class="hero-right" >
-      <img src="2185.jpg" alt="Rushabh - Web Developer" class="hero-image">
+
+    <div class="hero-right">
+      <img src="2185.jpg" alt="Rushabh Profile">
     </div>
-  </section><br><br><br>
-  <!-- Projects Section -->
-<section id="projects">
-  <h2 class="section-title">My Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <a href="https://github.com/rushuz/Event_Managment-Web.dev-" target="_blank">
-        <h3>Event Management Web App</h3>
-      </a>
-        <p>A full-stack web application to manage and schedule events, featuring real-time updates, user authentication, and responsive design. Built using MERN stack.</p>
-      
-    </div>
-    
-    <div class="project-card">
-      <a href="https://github.com/rushuz/Online-Auction-Platform" target="_blank">
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title"><span>My</span> Projects</h2>
+
+    <div class="project-grid">
+      <a href="https://github.com/rushuz/Online-Auction-Platform" target="_blank" class="project-link">
+      <div class="project-card">
         <h3>Online Auction Platform</h3>
+        <p>Full-stack app using MERN stack for real time bidding and auctions.</p>
+      </div>
       </a>
-        <p>A bidding system for online auctions developed with Node.js, Express, and MongoDB. Allows users to create, manage, and participate in live bidding with secure data handling.</p>
-      
+
+      <a href="https://github.com/rushuz/AI-Enabled-Real-Time-AI-Sales-Call-Assistant" target="_blank" class="project-link">
+      <div class="project-card">
+        <h3>AI Sales Call Assistant</h3>
+        <p>Real-time AI-powered sales analysis tool.</p>
+      </div>
+      </a>
+
+      <a href="https://github.com/rushuz/Turf-Booking-App" target="_blank" class="project-link">
+      <div class="project-card">
+        <h3>Turf Booking App</h3>
+        <p>Flutter + Firebase based booking system.</p>
+      </div>
+      </a>
     </div>
-    
-    <div class="project-card">
-      <a href="https://github.com/rushuz/ChatBot-Using-NLP" target="_blank">
-        <h3>Chat Bot using NLP</h3>
-      </a>
-        <p>An intelligent chatbot that responds to user queries using Natural Language Processing with Python and NLTK. Integrated with a simple frontend for real-time interaction.</p>
-      
-    </div>
-    
-    <div class="project-card">
-      <a href="https://github.com/rushuz/Tic-Tac-Toe-game" target="_blank">
-        <h3>Tic-Tac-Toe Game</h3>
-      </a>
-        <p>A fun and interactive browser-based Tic-Tac-Toe game using HTML, CSS, and JavaScript. Features player vs. player mode with clean UI and animations.</p>
-      
-    </div>    
-  </div>
-</section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Rushabh Shiradkar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
